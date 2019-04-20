@@ -1,0 +1,11 @@
+.red {
+  height: 300px;
+  width: 150px;
+  background-color: black;
+}
+#boton-pago {
+  background-color: yellow;
+}
+td {
+  border: solid 1px;
+}
