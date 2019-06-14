@@ -1,11 +1,53 @@
-.red {
-  height: 300px;
-  width: 150px;
-  background-color: black;
+html
+{
+  font-family: 'Nunito', sans-serif;
 }
-#boton-pago {
-  background-color: yellow;
+a
+{
+text-decoration: none;  
+color: #d500f9;
 }
-td {
-  border: solid 1px;
+
+.title
+{
+text-transform: uppercase;
 }
+.container
+{
+  background: #642B73;
+  background: -webkit-linear-gradient(ro right, #C6426E,#642873);
+  background: linear-gradient(to right,#C6426E,#642873);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content:center; 
+}
+.content
+{
+max-width: 960px;
+max-height: 500px;
+width: 100%;
+height: 100%;
+background-color: white;
+}
+
+.paragraph
+{
+  line-height: 1.8em;
+  font-weight: 300%;
+}
+.fa-star
+{
+  color:#ffc400;
+}
+.table
+{
+  width: 100%;
+  border-spacing: 0;
+}
+.table td,.table th
+{
+padding: 1em;
+text-align: left;
+}
+.table tr:nth-child(2){background-color: #F3e5f5;}
