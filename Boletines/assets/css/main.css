@@ -7,6 +7,12 @@ a
 text-decoration: none;  
 color: #d500f9;
 }
+/*Aqui estoy indicando el maximo de espacio que podra
+ocupar una imagen en mi pagina.*/
+img
+{
+max-width: 100%;
+}
 
 a:hover
 {
@@ -25,6 +31,7 @@ font-size: 2em;
   font-weight: bold;
   color: #642B73;
   font-size: 1.2em;
+  display: inline-block;
 }
 .main-image
 {
@@ -45,15 +52,16 @@ font-size: 2em;
 
 .content
 {
+/*utiliza unidades de medidas relativas*/
 max-width: 960px;
-max-height: 500px;
 width: 100%;
-height: 100%;
+height: 80vh;
 background-color: white;
 box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 border-radius: 4px;
 position: relative;
 padding: 0.8em;
+overflow:scroll;
 }
 .actions
 {
@@ -97,7 +105,7 @@ right: 1em;
 padding: 1em;
 text-align: left;
 }
-.table tr:nth-child(2){background-color: #F3e5f5;}
+.table tr:nth-child(2n){background-color: #F3e5f5;}
 
 .title-item
 {
@@ -110,7 +118,45 @@ text-align: left;
 {
   background-color: #C6426E;
   color: white;
-  padding: 10px;
+  padding: 0.5em;
   border-radius: 4px;
-  margin-right: 0.em;
+  margin-right: 0.5em;
+}
+
+/*Para pantallas de ancho mas chicos*/
+@media (max-width:600px)
+{
+  .content
+  {
+    padding: 1em;
+  }
+  /*aqui utilizamos una pseudo clase que nos permite seleccionar
+  un elemento basado en su posicion, cuando esta al lado de sus mismos
+  tipos*/
+
+  td:nth-of-type(1)
+  {
+    font-size: 1.5em;
+    font-weight: bold;
+    color:#642B73;
+  }
+  /*romperemos la tabla en filas pequeñas y para eso utilizamos
+    tranformamos las columnas en filas usando display block*/
+  td
+  {
+    display:block;
+  }
+  th
+  {
+    display: none;
+  }
+}
+/*esta media queries es para cuando las pantallas tenga un 
+Minimo de altura*/
+@media (min-height:550px)
+{
+.content
+{
+  height: 500px;
+}
 }
